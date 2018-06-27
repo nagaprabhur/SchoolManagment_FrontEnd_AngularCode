@@ -1,0 +1,57 @@
+<br>
+<div>
+  <h2>{{mesg}}</h2>
+</div>
+<div>
+    <form>
+      <div>
+        <h3>Update Student Marks</h3>
+      </div>
+      <div class="form-group">
+          <label for="sId">Student ID:</label>
+          <input type="text" class="form-control" name="sID" [(ngModel)]='sID'>
+        </div>
+      <div class="form-group">
+        <label for="sName">Student Name:</label>
+        <input type="text" class="form-control" name="sName" [(ngModel)]='sName'>
+      </div>
+      <div class="form-group">
+        <label for="english">English marks:</label>
+        <input type="text" class="form-control" name="English" [(ngModel)]='english'>
+      </div>
+      <div class="form-group">
+        <label for="maths">Maths marks</label>
+        <input type="text" class="form-control" name="maths" [(ngModel)]='maths' required>
+      </div>
+      <div class="form-group">
+          <label for="firstlanguage">firstlanguage marks</label>
+          <input type="text" class="form-control" name="firstlanguage" [(ngModel)]='firstlanguage'required>
+      </div>
+          <div class="form-group">
+              <label for="science">science marks</label>
+              <input type="text" class="form-control" name="science" [(ngModel)]='science'required>
+            </div>
+            <div class="form-group">
+                <label for="social">social marks</label>
+                <input type="text" class="form-control" name="social" [(ngModel)]='social'required>
+              </div>
+              <div class="form-group">
+                  <label for="phycis">phycis marks</label>
+                  <input type="text" class="form-control" name="phycis" [(ngModel)]='phycis'required>
+                </div>
+                <div class="form-group">
+                    <label for="marksType">Marks Type</label>
+                   <select  class="form-control" [(ngModel)]='marksType' name="marksType" required>
+                      <option>Quaterly</option>
+                      <option>HalfYearly</option>
+                      <option>Final</option>
+                   </select>
+                  </div>
+
+                
+      <div>
+        <button (click)='updateStudentMarks()' type="button" class="btn btn-primary">Save</button>
+      </div>
+    </form>
+  </div>
+  

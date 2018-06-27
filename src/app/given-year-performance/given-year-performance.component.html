@@ -1,0 +1,64 @@
+<div>
+  <h3>Fetch performance by Year</h3>
+</div>
+<br>
+<a (click)=studentPerformYearForm()>Click here to Fetch Student Performance of an Year</a><br>
+<a (click)=classPerformYearForm()>Click here to Fetch Class Performance of an Year</a>
+
+<br>
+<div *ngIf='inputForm'>
+<div  *ngIf='studentPerformTable' class="form-group">
+    <label for="sID">Student Name:</label>
+    <input type="text" class="form-control" name="sID" [(ngModel)]='sID' required>
+  </div>
+  <div *ngIf='classPerformTable' class="form-group">
+      <label for="className">Class Name:</label>
+      <input type="text" class="form-control" name="className" [(ngModel)]='className' required>
+    </div>
+  <div class="form-group">
+      <label for="sYear">Year:</label>
+      <input type="text" class="form-control" name="sYear" [(ngModel)]='sYear' required>
+    </div>
+  <div>
+    <button (click)='givenYearStudentPerformance()' type="button" class="btn btn-primary">Fetch</button>
+</div>
+</div>
+<br>
+
+<div *ngIf='studentPerformTable'>
+  <h4>Student Performance :</h4>
+  <table class="table table-striped">
+    <tr>
+      <td>StudentID</td>
+      <td>StudentName</td>
+      <td>Year</td>
+      <td>percentage</td>
+      <td>Grade</td>
+    </tr>
+    <tr>
+        <td>{{givenYearPerformVO.studentID}}</td>
+        <td>{{givenYearPerformVO.studentName}}</td>
+        <td>{{givenYearPerformVO.year}}</td>
+        <td>{{givenYearPerformVO.performance}}</td>
+        <td>{{givenYearPerformVO.grade}}</td>
+    </tr>
+  </table>
+</div>
+
+<div *ngIf='classPerformTable'>
+  <h4>Class Performance :</h4>
+<table class="table table-striped">
+  <tr>
+    <td>ClassName</td>
+    <td>TotalNoOfStudents</td>
+    <td>ClassPercentage</td>
+    <td>ClassGrade</td>
+  </tr>
+  <tr>
+      <td>{{classYearVo.className}}</td>
+      <td>{{classYearVo.totalNoOfStudents}}</td>
+      <td>{{classYearVo.classPercentage}}</td>
+      <td>{{classYearVo.classGrade}}</td>
+  </tr>
+</table>
+</div>

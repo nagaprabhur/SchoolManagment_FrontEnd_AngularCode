@@ -1,0 +1,71 @@
+
+<a (click)=studentRegisterForm()>Click here to Register Student</a><br>
+<a (click)=teacherRegisterForm()>Click here to Register Teacher</a>
+
+<br><br>
+<!-- Student register -->
+
+<h2>{{mesg}}</h2>
+
+<div *ngIf='StudentformOpen'>
+  <form>
+    <div>
+      <h3>Student Registration form</h3>
+    </div>
+    <div class="form-group">
+      <label for="sName">Student Name:</label>
+      <input type="text" class="form-control" name="sName" [(ngModel)]='sName' required>
+    </div>
+    <div class="form-group">
+      <label for="sAge">Student Age:</label>
+      <input type="text" class="form-control" name="sAge" [(ngModel)]='sAge' required>
+    </div>
+    <div class="form-group">
+      <label for="sClass">Student ClassName:</label>
+      <input type="text" class="form-control" name="sClass" [(ngModel)]='sClass' required>
+    </div>
+    <div class="form-group">
+        <label for="sYear">Year:</label>
+        <input type="text" class="form-control" name="sYear" [(ngModel)]='sYear' required>
+      </div>
+    <div>
+      <button (click)='saveStudent()' type="button" class="btn btn-primary">Save</button>
+    </div>
+  </form>
+</div>
+
+<!-- Teacher register -->
+<div *ngIf='TeacherformOpen'> 
+  <form>
+      <div>
+          <h3>Teacher Registration form</h3>
+        </div>
+    <div class="form-group">
+      <label for="eName">Employe Name:</label>
+      <input type="text" class="form-control" name="eName" [(ngModel)]='eName' required>
+    </div>
+    <div class="form-group">
+      <label for="eAge">Employe Age:</label>
+      <input type="text" class="form-control" name="eAge" [(ngModel)]='eAge' required>
+    </div>
+    <div class="form-group">
+      <label for="eAddress">Employe Address:</label>
+      <input type="text" class="form-control" name="eAddress" [(ngModel)]='eAddress' required>
+    </div>
+    <div class="form-group">
+      <label for="salary">Employe salary:</label>
+      <input type="text" class="form-control" name="salary" [(ngModel)]='salary' required>
+    </div>
+    <div class="form-group">
+      <label for="eClass">Employe ClassName:</label>
+      <input type="text" class="form-control" name="eClass" [(ngModel)]='eClass' required>
+    </div>
+    <div class="form-group">
+      <label for="subject">Employe ClassName:</label>
+      <input type="text" class="form-control" name="subject" [(ngModel)]='subject' required>
+    </div>
+    <div>
+      <button (click)='saveEmployee()' type="button" class="btn btn-primary">Save</button>
+    </div>
+  </form>
+</div>
